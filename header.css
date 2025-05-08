@@ -1,0 +1,93 @@
+
+/* Cuando el modal está en proceso de cierre, se aplica la animación */
+.modal-nav.closing {
+  animation: close 0.5s ease-in-out;  /* Animación de cierre */
+}
+
+/* Estilos adicionales para el contenido dentro del modal */
+.modal-content-nav h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.modal-content-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content-nav ul li {
+  margin-bottom: 10px;
+}
+
+.modal-content-nav ul li a {
+  border: 1px solid blue;
+  padding: 10px;
+  color: #00fff7;
+  text-decoration: none;
+  font-size: 23px;
+  transition: color 0.3s;
+}
+
+/* Efecto de cambio de color de los enlaces al pasar el ratón */
+.modal-content-nav ul li a:hover {
+  color: black;
+  background-color: wheat;
+}
+
+
+/*---------------------------- FOOTER ----------------------------*/
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  margin-top: 40px;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover{
+  color: wheat;
+}
+
+/*---------------------------- MEDIA QUERIES ----------------------------*/
+@media (max-width: 800px) {
+  /* Modificar el diseño del nav para que sea horizontal y permita que los elementos se envuelvan */
+  nav ul {
+    flex-direction: row; /* Mantener la distribución en fila (horizontal) */
+    justify-content: center; /* Centra los elementos dentro del nav */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    width: auto; /* El ancho del contenedor es automático */
+    flex-wrap: wrap; /* Permite que los elementos se pasen a la siguiente fila */
+  }
+
+  nav ul li {
+    padding: 3px 0px; /* Añadir algo de espacio alrededor de los elementos */
+  }
+
+  /* Asegurarse de que los botones ocupen solo el espacio necesario */
+  nav button {
+    width: auto; /* Asegura que el botón ocupe solo el espacio necesario */
+  }
+  .modal-content-nav {
+    width: 100%; /* Hace que el contenido del modal ocupe todo el ancho */
+    max-width: 100%; /* No se va a sobreponer en pantallas pequeñas */
+    padding: 15px;
+  }
+
+  /* Estilos para el contenido dentro del modal */
+  .modal-content-nav ul li {
+    display: inline-block; /* Los elementos del menú se muestran en línea */
+    margin-right: 10px; /* Espaciado entre los elementos */
+  }
+
+  /* Ajustar los enlaces del modal */
+  .modal-content-nav ul li a {
+    font-size: 18px; /* Mejorar la legibilidad */
+  }
+}
